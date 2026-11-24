@@ -9,10 +9,17 @@
 ## 帖子、讨论组与收藏
 
 <p>
-<img src="images/forum.png" alt="列表阅读：置顶摘要、帖子标题和评论入口" width="30%">
-<img src="images/chat.png" alt="讨论组：图文消息、引用与表态" width="30%">
-<img src="images/saved.png" alt="收藏：分类切换、分组与提及提醒" width="30%">
+
+<img width="1260" height="2612" alt="Screenshot_20261124090528" src="https://github.com/user-attachments/assets/4dce95bb-a1f9-4149-9eba-5977d3bf652f" />
+
+<img width="1260" height="2590" alt="Screenshot_20261124090626" src="https://github.com/user-attachments/assets/12b71374-85ec-49fb-8cbd-6c9c7468b383" />
+
+
+<img width="1260" height="2588" alt="Screenshot_20261124090642" src="https://github.com/user-attachments/assets/1f670db9-723e-4438-91a9-f4c5b7255a7a" />
+
+
 </p>
+
 
 截图来自应用实录，使用演示成员和内容。
 
