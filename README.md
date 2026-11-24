@@ -2,9 +2,11 @@
 
 **朝频大赐福自用定制客户端**，给频道成员在手机或平板上找房间、聊近况、读帖子。手机独立连接频道，不需要电脑在线。作者：[朝禊ASOGI](https://space.bilibili.com/315312)。
 
-**[国内镜像下载 0.9.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.9.0/Asogi-Channel-Android-0.9.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.9.0/Asogi-Channel-Android-0.9.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
+**[国内镜像下载 0.10.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.10.0/Asogi-Channel-Android-0.10.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.10.0/Asogi-Channel-Android-0.10.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
 
-适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。第一次使用，或已装 **0.8.1 及更早版本**，请下载上面的完整 APK，直接覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
+适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.9.0** 的成员可以直接在应用内「我的 → 软件更新」下载 2 MB 增量补丁升级。第一次使用，或已装 **0.8.1 及更早版本**，请下载上面的完整 APK，直接覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
+
+> app基于qq频道，app仅学习自用，频道版权归腾讯所有。
 
 ## 帖子、讨论组与收藏
 
@@ -34,6 +36,15 @@
 默认先用国内镜像，失败后尝试 GitHub。也可以固定使用其中一条线路。没有适用补丁时会给出完整包大小，由你决定是否下载。
 
 ## 更新日志
+
+**0.10.0 · 外部图片分享、即时同步优化与空子频道修复**
+
+- **外部分享到子频道**：支持从系统相册或其他应用分享单张／多张图片到本应用，自动弹出子频道选择与确认发送层（支持搜索、近期访问与可选附言）。
+- **一键加入频道**：未加入频道的已登录账号在讨论组目录、收藏、帖子区与「我的」页均展示清晰的「加入频道」入口。
+- **新建空子频道可正常输入发言**：修复刚创建、尚无历史消息的空子频道无法输入和发送首条消息的问题。
+- **切回恢复与实时推送提速**：实时推送消息直接投射当前窗口免额外 HTTP 往返，加速 JS 桥接轮询与目录变更同步，切回应用保留原阅读窗口不再长时间显示顶部加载条。
+- **输入框自适应增高**：修复软键盘弹出时输入框被锁定单行的问题，长文自动随换行平滑扩高至合理上限并支持内部滚动。
+- **过渡动效与界面美化**：升级切页、进房与侧滑返回视差动画、底栏与折叠箭头动效、悬浮胶囊与工具面板展开过渡、圆角色调设置卡、大图双击缩放，并在关于页补充版权与用途声明。
 
 **0.9.0 · 列表阅读与应用内增量更新**
 
