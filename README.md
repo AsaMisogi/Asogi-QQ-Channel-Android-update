@@ -10,16 +10,10 @@
 
 ## 帖子、讨论组与收藏
 
-<p>
-
-<img width="1260" height="2612" alt="Screenshot_20261124090528" src="https://github.com/user-attachments/assets/4dce95bb-a1f9-4149-9eba-5977d3bf652f" />
-
-<img width="1260" height="2590" alt="Screenshot_20261124090626" src="https://github.com/user-attachments/assets/12b71374-85ec-49fb-8cbd-6c9c7468b383" />
-
-
-<img width="1260" height="2588" alt="Screenshot_20261124090642" src="https://github.com/user-attachments/assets/1f670db9-723e-4438-91a9-f4c5b7255a7a" />
-
-
+<p align="center">
+  <img width="32%" alt="Screenshot_20261124090528" src="https://github.com/user-attachments/assets/4dce95bb-a1f9-4149-9eba-5977d3bf652f" />
+  <img width="32%" alt="Screenshot_20261124090626" src="https://github.com/user-attachments/assets/12b71374-85ec-49fb-8cbd-6c9c7468b383" />
+  <img width="32%" alt="Screenshot_20261124090642" src="https://github.com/user-attachments/assets/1f670db9-723e-4438-91a9-f4c5b7255a7a" />
 </p>
 
 
