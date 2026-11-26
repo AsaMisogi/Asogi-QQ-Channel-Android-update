@@ -2,9 +2,9 @@
 
 **朝频大赐福自用定制客户端**，给频道成员在手机或平板上找房间、聊近况、读帖子。手机独立连接频道，不需要电脑在线。作者：[朝禊ASOGI](https://space.bilibili.com/315312)。
 
-**[国内镜像下载 0.11.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.11.0/Asogi-Channel-Android-0.11.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.11.0/Asogi-Channel-Android-0.11.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
+**[国内镜像下载 0.12.1](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.12.1/Asogi-Channel-Android-0.12.1.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.12.1/Asogi-Channel-Android-0.12.1.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
 
-适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.10.0** 的成员可以直接在应用内「我的 → 软件更新」下载 2.1 MB 增量补丁升级（默认优先国内源）。第一次使用，或已装 **0.9.0 及更早版本**，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
+适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.11.0** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装其他版本（含本地测试版 0.12.0），请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
 
 > app基于qq频道，app仅学习自用，频道版权归腾讯所有。
 
@@ -23,6 +23,8 @@
 - **聊天**：进房读历史、左滑引用、发文字或原图。读旧消息时新消息不会把你拉回底部。
 - **收藏**：左右拖动切换分类，常去的房间、板块与想重读的文章可分别整理。消息收藏是预留分类。
 
+[查看外部频道目录、身份组气泡与半屏相册](images/discord-chat.jpg)
+
 ## 下次在应用里更新
 
 从 **0.9.0 起**，启动时可检查新版；也可到「我的 → 软件更新」手动检查。看到补丁大小后点下载，进度完成后点「安装新版」，按 Android 提示允许此来源安装，再确认更新。补丁由应用处理，无需自己打开 `.delta.gz`。
@@ -30,6 +32,13 @@
 默认先用国内镜像，失败后尝试 GitHub。也可以固定使用其中一条线路。没有适用补丁时会给出完整包大小，由你决定是否下载。
 
 ## 更新日志
+
+**0.12.1 · 外部频道、统一聊天与后台发送**
+
+- 登录 QQ 并入频后，可从「讨论组 → 外部频道」进入 Discord 的两个文字房间和一个论坛区。频道头像、头图和「继续上次的讨论」在目录顶部。
+- 桥接沿用 QQ 的气泡、身份组颜色与徽标、引用、输入栏和半屏相册。图片与自定义表情跟随缩略图偏好；照片可以和附言一起发送。
+- 切换应用时，已确认的 QQ 或桥接发送继续。短暂离开保留连接；长时间闲置且未开启后台保活时才休眠。修复长按空白后右滑返回、后台渲染器回收后页面不响应的问题。
+- 桥接回执到达后即可归档。遇到特定 TLS 记录读取错误，桥接聊天使用原发送编号在新连接重试一次，避免把同一条发两遍。
 
 **0.11.0 · 「里武林」备用传信、实时后台保活推送、断网自愈与多项体验大升级**
 
