@@ -2,9 +2,9 @@
 
 **朝频大赐福自用定制客户端**，给频道成员在手机或平板上找房间、聊近况、读帖子。手机独立连接频道，不需要电脑在线。作者：[朝禊ASOGI](https://space.bilibili.com/315312)。
 
-**[国内镜像下载 0.12.1](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.12.1/Asogi-Channel-Android-0.12.1.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.12.1/Asogi-Channel-Android-0.12.1.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
+**[国内镜像下载 0.12.2](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.12.2/Asogi-Channel-Android-0.12.2.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.12.2/Asogi-Channel-Android-0.12.2.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
 
-适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.11.0** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装其他版本（含本地测试版 0.12.0），请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
+适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.12.1** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装更早版本，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
 
 > app基于qq频道，app仅学习自用，频道版权归腾讯所有。
 
@@ -32,6 +32,12 @@
 默认先用国内镜像，失败后尝试 GitHub。也可以固定使用其中一条线路。没有适用补丁时会给出完整包大小，由你决定是否下载。
 
 ## 更新日志
+
+**0.12.2 · 适配腾讯新版网页、切网自愈与讨论组同步提速**
+
+- **彻底修复「腾讯网页版本已更新，请使用频道网页」与进房卡重连**：完成腾讯频道网页新版构建（`0318b043`）全部业务接口契约核验与白名单适配，兼容灰度分流与旧节点。
+- **加固弱网与切换不同 Wi-Fi 自愈能力**：监听底层网络句柄识别同制式跨 Wi-Fi 切换，加入路由稳定防抖合并；修复网页残缺/SPA 路由微调导致无法重载自愈的死锁问题，点击「立即重试」或网络恢复时自动重建健康会话，且不再把非网络提示误标为「网络重连中」。
+- **消除讨论组顶部加载条无故常动，大幅提升加载速度**：稳定在线停留期间的后台静默保活同步不再点亮顶部进度线；底层 WebView 桥接升级为全量事件 0ms 瞬时唤醒（大幅削减进房、翻页与发送回执延迟）；讨论组目录摘要升级 8 合 1 批量合并请求减少约 80% 网络往返；精确跟踪官方 WebSocket 推送健康度，推送正常时免去每 5 秒全量拉历史，断线时自动快速回退。
 
 **0.12.1 · 外部频道、统一聊天与后台发送**
 
