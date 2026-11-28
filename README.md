@@ -2,9 +2,9 @@
 
 **朝频大赐福自用定制客户端**，给频道成员在手机或平板上找房间、聊近况、读帖子。手机独立连接频道，不需要电脑在线。作者：[朝禊ASOGI](https://space.bilibili.com/315312)。
 
-**[国内镜像下载 0.14.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.14.0/Asogi-Channel-Android-0.14.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.14.0/Asogi-Channel-Android-0.14.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
+**[国内镜像下载 0.15.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.15.0/Asogi-Channel-Android-0.15.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.15.0/Asogi-Channel-Android-0.15.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
 
-适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.13.0** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装更早版本，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
+适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.14.0** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装更早版本，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
 
 > app基于qq频道，app仅学习自用，频道版权归腾讯所有。
 
@@ -32,6 +32,12 @@
 默认先用国内镜像，失败后尝试 GitHub。也可以固定使用其中一条线路。没有适用补丁时会给出完整包大小，由你决定是否下载。
 
 ## 更新日志
+
+**0.15.0 · 切换子频道纯 Rust 直连提速与 Phase 2 新版帖子全富媒体能力**
+
+- **切换子频道更跟手、告别隐藏页排队**：讨论组切房首屏直接通过纯 Rust HTTP/2 持久连接池预取最新消息（~10ms）；帖子板块、并行帖子详情+评论（1 RTT 同时取正文与评论）与楼中楼分页全部升级至纯 Rust HTTP/2 直连，切板块、开原帖响应速度大幅提升。
+- **新版帖子全富媒体原生展示**：原生 Material 3 完整渲染帖子中的语音帖（时长、转写文本与播放）、视频卡片、文件附件下载、投票结果进度条、帖子表情表态条、IP 属地、B站/腾讯文档第三方卡片与长文排版样式。
+- **更多社区高价值能力**：点击帖子内 `#话题` 标签聚合浏览同话题全部帖子；成员卡片直接查看「Ta 的历史发帖」；帖子区顶栏展示全频道帖子总数；切换讨论组消息提醒/免打扰模式同步至腾讯服务端。
 
 **0.14.0 · 彻底修复 25 秒聊天同步延迟与纯 Rust HTTP/2 直连同步引擎**
 
