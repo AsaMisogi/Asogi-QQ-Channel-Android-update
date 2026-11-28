@@ -2,9 +2,9 @@
 
 **朝频大赐福自用定制客户端**，给频道成员在手机或平板上找房间、聊近况、读帖子。手机独立连接频道，不需要电脑在线。作者：[朝禊ASOGI](https://space.bilibili.com/315312)。
 
-**[国内镜像下载 0.15.1](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.15.1/Asogi-Channel-Android-0.15.1.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.15.1/Asogi-Channel-Android-0.15.1.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
+**[国内镜像下载 0.16.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.16.0/Asogi-Channel-Android-0.16.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.16.0/Asogi-Channel-Android-0.16.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
 
-适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.15.0** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装更早版本，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
+适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.15.1** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装更早版本，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
 
 > app基于qq频道，app仅学习自用，频道版权归腾讯所有。
 
@@ -32,6 +32,14 @@
 默认先用国内镜像，失败后尝试 GitHub。也可以固定使用其中一条线路。没有适用补丁时会给出完整包大小，由你决定是否下载。
 
 ## 更新日志
+
+**0.16.0 · 跨端实时性提速、子频道点击转场动画、后台预加载与外部频道缓存**
+
+- **消息即时性大幅提速**：全频道未读水位聚合直连纯 Rust HTTP/2 并压缩至 **3.5 秒**周期，活跃讨论组增量同步周期由 2.2 秒提速至 **1.1 秒**，列表预览与聊天界面更新都更迅速。
+- **消除同账号跨端发消息时的偶发断连**：共享 Rust 同步核心自动对增量瞬态异常降级最新页自愈，单次瞬态抖动后台静默重试，不再动辄弹出断连提示条。
+- **子频道点击反馈与平滑进房转场**：点击子频道或外部频道后先在对应条目上展示按压高亮与微弹动画，再伴随底层视差与柔和暗幕平滑过渡到聊天界面，告别生硬瞬移。
+- **未读消息后台预加载与错峰气泡弹入**：列表预览发现新消息时，后台已提前解码并缓存好最新消息（不清除未读数），点进聊天界面第 1 帧消息就已经完整呈现；断网恢复或后台静默重载补回新消息时，气泡按序轻盈弹出。
+- **外部频道持久缓存与资料卡精简**：首次加载出外部频道后持久缓存，冷启动或从其他 App 切回时稳稳留在原位不突兀出现（仅在掉登录/掉账号时清除）；移除成员资料里的「Ta 的帖子」。
 
 **0.15.1 · 帖子文字、表情和作者资料页修复**
 
