@@ -2,9 +2,9 @@
 
 **朝频大赐福自用定制客户端**，给频道成员在手机或平板上找房间、聊近况、读帖子。手机独立连接频道，不需要电脑在线。作者：[朝禊ASOGI](https://space.bilibili.com/315312)。
 
-**[国内镜像下载 0.13.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.13.0/Asogi-Channel-Android-0.13.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.13.0/Asogi-Channel-Android-0.13.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
+**[国内镜像下载 0.14.0](https://gh-proxy.org/https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.14.0/Asogi-Channel-Android-0.14.0.apk)** · [GitHub 直连 APK](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases/download/v0.14.0/Asogi-Channel-Android-0.14.0.apk) · [全部发行版本](https://github.com/AsaMisogi/Asogi-QQ-Channel-Android-update/releases)
 
-适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.12.3** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装更早版本，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
+适用于 Android 8.0 及以上的 arm64 手机、平板和 x86_64 模拟器。已安装 **0.13.0** 的成员可以直接在应用内「我的 → 软件更新」下载增量补丁升级（默认优先国内源）。第一次使用，或已装更早版本，请下载上面的完整 APK，或直接在软件更新中下载完整安装包覆盖安装。**不要先卸载**，以保留账号、草稿、收藏和本机聊天记录。
 
 > app基于qq频道，app仅学习自用，频道版权归腾讯所有。
 
@@ -32,6 +32,12 @@
 默认先用国内镜像，失败后尝试 GitHub。也可以固定使用其中一条线路。没有适用补丁时会给出完整包大小，由你决定是否下载。
 
 ## 更新日志
+
+**0.14.0 · 彻底修复 25 秒聊天同步延迟与纯 Rust HTTP/2 直连同步引擎**
+
+- **彻底根治讨论组收消息延迟高达 25 秒的问题**：排查确认腾讯 `wc_web` 仅发送 `HeartBeat` 心跳并不会稳定向普通讨论组推送正文包，此前仅凭心跳健康就把历史刷新拉长至 25 秒导致严重卡顿；新版严格区分「连接心跳」与「实证收到推送正文」，未实证推送时前台讨论组按 **2.2 秒起点到起点** 极小窗口增量同步，切回前台瞬时唤醒。
+- **双端共享纯 Rust HTTP/2 直连核心落地**：在原生 `libasogi_store.so` 新增与 SQLite 锁完全解耦的纯 Rust HTTP/2 网络通道（`reqwest` + `rustls` + `tokio` + `prost`），前台讨论组增量检测直接走 Rust HTTP/2 长连接，仅请求 `latest_seq + 1` 之后的新消息；无新发言时 **0 次调用 WebView JS 跨桥**（单次仅 ~10–30ms），有新消息时直接复用本地富文本解码零二次请求，彻底免疫隐藏 WebView 节流与 10 分钟失焦断连。
+- **顶栏实时同步状态更精准、隐私隔离与无感降级**：状态栏精准区分「直连同步」「推送已连接」「实时同步」；登录与发消息/发帖/评论/撤回仍完全留在隔离官方 WebView 通道，与手机 QQ 同号共存不互踢，直连会话仅驻留内存并在退出/切号时即时清零。
 
 **0.13.0 · 后台持续下载文件、外部中转升级与独立域名迁移**
 
